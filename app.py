@@ -17,19 +17,19 @@ for linha in pagina_Escala.iter_rows(min_row=2):
     dia = linha[2].value
     posição = linha[3].value
     
-    mensagem = f'Paz Do Senhor, passando para lembrar que você está escalado (a) no culto dia {dia.strftime("%d/%m/%Y")}. Função *{posição}*.     *Portanto, meus amados irmãos, sede firmes e constantes, sempre abundantes na obra do Senhor, sabendo que o vosso trabalho não é vão no Senhor*.*Coríntios 16:58*'
+    mensagem = f'Paz Do Senhor, passando para lembrar que você está escalado (a) hoje. Função *{posição}*.     *Portanto, meus amados irmãos, sede firmes e constantes, sempre abundantes na obra do Senhor, sabendo que o vosso trabalho não é vão no Senhor*.*Coríntios 16:58*' 
     
-try:
-    link_mensagem_whatsapp = f'https://web.whatsapp.com/send?phone={telefone}&text={quote(mensagem)}'
-    webbrowser.open(link_mensagem_whatsapp)
-    sleep(10)
-    seta = pyautogui.locateCenterOnScreen('seta.png')
-    sleep(5)
-    pyautogui.click(seta.x, seta.y)
-    sleep(5)
-    pyautogui.hotkey('ctrl','w')
-    sleep(5)
-except:
-    print(f'Não foi possível enviar mensagem para {nome}')
-    with open('erros.csv','a',newline='',encoding='utf-8') as arquivo:
-        arquivo.write(f'{nome},{telefone}{os.linesep}')
+    try:
+        link_mensagem_whatsapp = f'https://web.whatsapp.com/send?phone={telefone}&text={quote(mensagem)}'
+        webbrowser.open(link_mensagem_whatsapp)
+        sleep(60)
+        seta = pyautogui.locateCenterOnScreen('seta.png')
+        sleep(60)
+        pyautogui.click(seta[0],seta[1])
+        sleep(60)
+        pyautogui.hotkey('ctrl','w')
+        sleep(60)
+    except:
+        print(f'Não foi possível enviar mensagem para {nome}')
+        with open('erros.csv','a',newline='',encoding='utf-8') as arquivo:
+            arquivo.write(f'{nome},{telefone}{os.linesep}')
