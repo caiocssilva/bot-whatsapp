@@ -17,7 +17,7 @@ for linha in pagina_Escala.iter_rows(min_row=2):
     dia = linha[2].value
     posição = linha[3].value
     
-    mensagem = f'Paz Do Senhor, passando para lembrar que você está escalado (a) hoje. Função *{posição}*.     *Portanto, meus amados irmãos, sede firmes e constantes, sempre abundantes na obra do Senhor, sabendo que o vosso trabalho não é vão no Senhor*.*Coríntios 16:58*' 
+    mensagem = f'Paz Do Senhor, passando para lembrar que você está escalado (a) hoje no culto. Função *{posição}*.     *Portanto, meus amados irmãos, sede firmes e constantes, sempre abundantes na obra do Senhor, sabendo que o vosso trabalho não é vão no Senhor*.*Coríntios 16:58*' 
     
     try:
         link_mensagem_whatsapp = f'https://web.whatsapp.com/send?phone={telefone}&text={quote(mensagem)}'
